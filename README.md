@@ -1,17 +1,15 @@
-##ReactJS and Socket.io Chat App Tutorial
-
-
-This is the code from a tutorial done on youtube [here](https://www.youtube.com/playlist?list=PLfUtdEcvGHFHdOYFXj4cY6ZIFkSp6MOuY).
+##ReactJS and Socket.io Chatally App
 
 ###Getting Started
 
-First you'll need to fork or download the respository.
-
-Then in terminal you'll install the node modules
+Install the modules using the terminal and the comand below (must be in root folder)
 
 ``` npm install ```
 
-Then you can run it using 
+
+T
+
+Afterwards, you can run the code by using: 
 
 ``` npm run react ``` to start React dev server.
 ``` npm run server ``` to start NodeJS Socket.io server.
