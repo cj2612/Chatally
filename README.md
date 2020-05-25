@@ -7,7 +7,7 @@ Install the modules using the terminal and the comand below (must be in root fol
 ``` npm install ```
 
 
-T
+
 
 Afterwards, you can run the code by using: 
 
