@@ -97,10 +97,11 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: #2e2e4f;
+  background: black;
+  
 }
 #side-bar .search {
-  background: #3e3e5e;
+  background:  #217bd4;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -108,7 +109,7 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
   align-items: center;
   border-width: 1px 0;
   border-style: solid;
-  border-color: black;
+  border-color: white;
   padding-left: 15px;
   padding-right: 20px;
   height: 10vh;
@@ -117,20 +118,21 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
 #side-bar .search .search-icon {
   margin-right: 15px;
   cursor: pointer;
+  color: white;
 }
 #side-bar .search input {
   width: 100%;
-  background: #3e3e5e;
+  background:  #217bd4;
   flex-grow: 1;
   box-sizing: border-box;
   border: none;
-  color: #cac8ee;
+  color:white;
 }
 #side-bar .search input:focus {
   outline: none;
 }
 #side-bar .search input::placeholder {
-  color: #cac8ee;
+  color: white;
   opacity: 0.6;
 }
 #side-bar .search .plus {
@@ -139,12 +141,13 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
   cursor: pointer;
   width: 13px;
   height: 13px;
+  
 }
 #side-bar .search .plus::after,
 #side-bar .search .plus::before {
   content: "";
   position: absolute;
-  background: #b3b2ca;
+  background: white;
 }
 #side-bar .search .plus::after {
   width: 16px;
@@ -159,7 +162,8 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
 }
 #side-bar .users {
   overflow-y: scroll;
-  background: #3e3e5e;
+  background: #68a6e3;
+  font-size: 16px;
   flex-grow: 1;
 }
 #side-bar .users::-webkit-scrollbar-track {
@@ -171,7 +175,7 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
   background-color: green;
 }
 #side-bar .users::-webkit-scrollbar-thumb {
-  background-color: #484d79;
+  background-color: #68a6e3;
 }
 #side-bar .users .user {
   align-items: center;
@@ -179,10 +183,11 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
   height: 66px;
   justify-content: flex-start;
   padding: 18px 16px;
+  color: white;
 }
 #side-bar .users .user.active,
 #side-bar .users .user:hover {
-  background: #2e2e4f;
+  background: #68a6e3;
 }
 #side-bar .users .user:hover:not(.active) {
   cursor: pointer;
@@ -192,7 +197,7 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
   flex-grow: 1;
 }
 #side-bar .users .user .user-info .last-message {
-  font-size: 12px;
+  font-size: 16px;
   opacity: 0.56;
 }
 #side-bar .users .user .new-message {
@@ -203,7 +208,7 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
 }
 #side-bar .current-user {
   align-items: center;
-  background: #484d79;
+  background:  #5097dd;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -212,6 +217,8 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
   justify-content: space-between;
   padding-left: 16px;
   padding-right: 16px;
+  color: white;
+  font-size: 16px;
 }
 #side-bar .current-user .logout {
   align-items: center;
@@ -332,6 +339,7 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
   border-top-left-radius: 0;
   box-sizing: border-box;
   color: #3e8cda;
+  font-size: 18px;
   height: 100%;
   padding: 10px 15px;
   position: relative;
@@ -391,7 +399,7 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
 }
 .message-input {
   background: white;
-  color: #484d79;
+  color: #185088;
   box-sizing: border-box;
   height: 10vh;
   max-height: 65px;
@@ -421,7 +429,7 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
   background-color: green;
 }
 .message-input .message-form .form-control::-webkit-scrollbar-thumb {
-  background-color: #484d79;
+  background-color: #59a0e2;
 }
 .message-input .message-form .form-control:focus {
   outline: none;
@@ -434,12 +442,12 @@ background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/
   border: none;
   height: 100%;
   color: #fff;
-  background: #A668E3;
+  background: #5499de;
   transition: all 0.35s ease-out;
 }
 .message-input .message-form .send:disabled {
   opacity: 0.2;
-  background: #5d5d8a;
+  background: #61a2e4;
 }
 
 .emoticons {
