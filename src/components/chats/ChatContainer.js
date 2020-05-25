@@ -34,22 +34,18 @@ export default class ChatContainer extends Component {
 		socket.emit(PRIVATE_MESSAGE, {reciever, sender:user.name})
 	}
 
-	/*
-	*	Reset the chat back to only the chat passed in.
-	* 	@param chat {Chat}
-	*/
+	
+	//Reset the chat back to only the chat passed in.
+	
 	resetChat = (chat)=>{
 		return this.addChat(chat, true)
 	}
 
-	/*
-	*	Adds chat to the chat container, if reset is true removes all chats
-	*	and sets that chat to the main chat.
-	*	Sets the message and typing socket events for the chat.
-	*	
-	*	@param chat {Chat} the chat to be added.
-	*	@param reset {boolean} if true will set the chat as the only chat.
+	/*Adds the chat to the container, in case that the reset is true it deletes 
+	everything and goes back to the main chat.
+	Sets the message and typing socket events for the chat.
 	*/
+	
 	addChat = (chat, reset = false)=>{
 		const { socket } = this.props
 		const { chats } = this.state
@@ -64,12 +60,8 @@ export default class ChatContainer extends Component {
 		socket.on(messageEvent, this.addMessageToChat(chat.id))
 	}
 
-	/*
-	* 	Returns a function that will 
-	*	adds message to chat with the chatId passed in. 
-	*
-	* 	@param chatId {number}
-	*/
+
+	//Returns a function that adds the message to the chat with chatId being passed in
 	addMessageToChat = (chatId)=>{
 		return message => {
 			const { chats } = this.state
@@ -83,10 +75,7 @@ export default class ChatContainer extends Component {
 		}
 	}
 
-	/*
-	*	Updates the typing of chat with id passed in.
-	*	@param chatId {number}
-	*/
+	//Updates the typing of chat with id passed in.
 	updateTypingInChat = (chatId) =>{
 		return ({isTyping, user})=>{
 			if(user !== this.props.user.name){
@@ -107,27 +96,19 @@ export default class ChatContainer extends Component {
 			}
 		}
 	}
-
-	/*
-	*	Adds a message to the specified chat
-	*	@param chatId {number}  The id of the chat to be added to.
-	*	@param message {string} The message to be added to the chat.
-	*/
+	// Sends the message to the chat we chose
 	sendMessage = (chatId, message)=>{
 		const { socket } = this.props
 		socket.emit(MESSAGE_SENT, {chatId, message} )
 	}
 
-	/*
-	*	Sends typing status to server.
-	*	chatId {number} the id of the chat being typed in.
-	*	typing {boolean} If the user is typing still or not.
-	*/
+	// Sends the typing status to the server
 	sendTyping = (chatId, isTyping)=>{
 		const { socket } = this.props
 		socket.emit(TYPING, {chatId, isTyping})
 	}
 
+	//Sets the chat that is active at the present time
 	setActiveChat = (activeChat)=>{
 		this.setState({activeChat})
 	}
