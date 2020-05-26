@@ -30,7 +30,7 @@ module.exports = function(socket){
 		}
 	})
 
-	//User Connects with username
+	//User Connects with username,first it verifies the user then it adds to the list
 	socket.on(USER_CONNECTED, (user)=>{
 		user.socketId = socket.id
 		connectedUsers = addUser(connectedUsers, user)
@@ -44,7 +44,7 @@ module.exports = function(socket){
 
 	})
 	
-	//User disconnects
+	//User disconnects, removes the user from the list
 	socket.on('disconnect', ()=>{
 		if("user" in socket){
 			connectedUsers = removeUser(connectedUsers, socket.user.name)
@@ -87,6 +87,8 @@ module.exports = function(socket){
 
 }
 
+
+//Helper Functions
 // Returns a function that will take a chat id and a boolean isTyping and emits to the chatId if the other user is typing.
 
 function sendTypingToChat(user){

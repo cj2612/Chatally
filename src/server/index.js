@@ -1,6 +1,8 @@
+//Creating a HTTP server with socket.io
 var app = require('http').createServer()
 var io = module.exports.io = require('socket.io')(app)
 
+//Making a Port to listen to the users
 const PORT = process.env.PORT || 3231
 
 const SocketManager = require('./SocketManager')
