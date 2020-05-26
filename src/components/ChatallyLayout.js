@@ -34,7 +34,7 @@ export default class ChatallyLayout extends Component {
 	}
 
 	/*
-	* 	Sets the user property in state 
+	* 	Sets the user property in state after action
 	*	@param user {id:number, name:string}
 	*/	
 	setUser = (user)=>{
@@ -44,7 +44,7 @@ export default class ChatallyLayout extends Component {
 	}
 
 	/*
-	*	Sets the user property in state to null.
+	*	Sets the user property in state to null. "Not Active"
 	*/
 	logout = ()=>{
 		const { socket } = this.state
