@@ -25,7 +25,7 @@ export default class SideBar extends Component{
 	}
 
 	render(){
-		const { chats, activeChat, user, setActiveChat, logout } = this.props
+		const { chats, activeChat, user, setActiveChat, logout } = this.props /* array of chat objects*/ 
 		const { reciever } = this.state
 		return (
 			<div id="side-bar">
