@@ -16,8 +16,8 @@
   "scripts": {
     "start": "npm install -g serve; serve -s build; npm server;",
     "start": "npm install -g serve; serve -s build; npm server",
-    "heroku-postbuild":"npm run build",
-    "postinstall":"npm run server",
+    "heroku-postbuild":"npm run build; npm run server",
+    "postinstall":"npm run build; npm run server",
     "react": "react-scripts start",
     "server": "nodemon src/server/index.js",
     "build": "react-scripts build",
