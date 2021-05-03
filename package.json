@@ -14,11 +14,8 @@
     "uuid": "^3.1.0"
   },
   "scripts": {
-<<<<<<< HEAD
     "start": "npm install -g serve; serve -s build; npm server;",
-=======
     "start": "npm install -g serve; serve -s build; npm server",
->>>>>>> dbd86a60c632b69652f08910d5c84d5f997ee054
     "heroku-postbuild":"npm run build",
     "postinstall":"npm run build",
     "react": "react-scripts start",
